@@ -11,6 +11,7 @@ https://github.com/Eternilab/step-ca
 
 ## Exemple d'inventaire
 
+```
 all:
   children:
     debian:
@@ -41,7 +42,7 @@ all:
     va_servers:
       hosts:
         va.my-domain.com:
-
+```
 
 ## Commandes 
 

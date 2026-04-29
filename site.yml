@@ -1,0 +1,44 @@
+---
+# Hardenning
+- hosts:
+  - debian
+  roles:
+    - hostname
+    # - openssh-server
+  tags:
+    hardening
+
+# PKI
+- hosts:
+  - ca_server
+  - ra_servers
+  roles:
+    - step-ca
+- hosts:
+  - va_servers
+  roles:
+    - openssl
+
+- name: "Install common packages for Debian"
+  hosts:
+    - debian
+  tasks:
+    - name: "Install the packages"
+      ansible.builtin.apt:
+        state: latest
+        pkg:
+          - curl
+          - fail2ban
+          - rsync
+          - bash-completion
+          - vim
+        autoclean: true
+        autoremove: true
+        force_apt_get: true
+        update_cache: true
+        cache_valid_time: 3600
+        install_recommends: false
+      become: true
+  tags:
+    - install
+    - debian

@@ -1,0 +1,12 @@
+root_group: "root"
+domainname: "my-domain.com"
+dns_servers:
+  - 8.8.8.8
+  - 9.9.9.9
+hostname_hosts_statics:
+  - "10.14.5.52   ra.my-domain.com"
+  - "10.14.5.53   va.my-domain.com"
+  - "10.14.5.54   ca.my-domain.com"
+  - "10.14.5.55   admin.my-domain.com"
+step_ca_domain: "my-domain.com"
+organisation: "MY ORGANIZATION"

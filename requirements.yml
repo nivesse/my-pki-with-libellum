@@ -1,0 +1,17 @@
+---
+roles:
+  - src: https://github.com/Eternilab/step-ca.git
+    scm: git
+    version: main
+  - src: https://github.com/Eternilab/step-cli.git
+    scm: git
+    version: main
+  - src: https://github.com/Eternilab/openssl.git
+    scm: git
+    version: main
+  - src: https://github.com/Eternilab/hostname.git
+    scm: git
+    version: main
+  - src: https://github.com/Eternilab/openssh-server.git
+    scm: git
+    version: main
